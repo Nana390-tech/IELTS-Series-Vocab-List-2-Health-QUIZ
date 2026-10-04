@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wordlist 2 — Health | B1+ Vocabulary Quiz</title>
+<style>
+/* ============================================================
+   INK & HIGHLIGHTER — B1+ Vocabulary List 2 (Fall) "Health"
+   Same series as Wordlist 1; new signature = anatomical callouts
+   ============================================================ */
+:root{
+  --ink:#2E1230; --ink-2:#4E2450; --paper:#F9F4F8; --card:#FFFFFF;
+  --slate:#7B6080; --rule:#E6D9E4;
+  --hl-1:#C9E04A; --hl-2:#8FE0C0; --hl-3:#F3A6CE; --hl-4:#F6C473;
+  --hl-5:#C9A8E8; --hl-6:#8FC9EE; --hl-7:#D7E86B; --hl-8:#F2A89A;
+  --good:#2E7D5B; --good-bg:#E8F4EE; --bad:#C23B5A; --bad-bg:#FAEBEF;
+  --display:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --read:Georgia,"Times New Roman",serif;
+  --mono:"Courier New",ui-monospace,monospace;
+  --ar:"Segoe UI",Tahoma,"Geeza Pro",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+input{font-family:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 80px}
+
+/* ---------- masthead ---------- */
+header.mast{border-bottom:2px solid var(--ink);padding:26px 0 16px;margin-bottom:26px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px}
+.mast h1{font-size:clamp(28px,4.6vw,44px);font-weight:800;letter-spacing:-.035em;line-height:1;margin:0;text-transform:lowercase}
+.mast .sub{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin:8px 0 0}
+.mast .spacer{flex:1}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink);padding:5px 10px;white-space:nowrap}
+
+/* ---------- highlighter swipe ---------- */
+.hl{position:relative;z-index:0;font-weight:700;padding:0 .05em}
+.hl::before{content:"";position:absolute;left:-.18em;right:-.18em;top:.12em;bottom:.02em;
+  background:var(--swipe,var(--hl-1));transform:skewX(-9deg) rotate(-.7deg);z-index:-1;
+  border-radius:2px 6px 3px 5px;animation:swipe .5s cubic-bezier(.2,.8,.3,1) both}
+@keyframes swipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+/* ---------- start screen ---------- */
+.start{max-width:780px}
+.lede{font-family:var(--read);font-size:19px;line-height:1.65;color:var(--ink-2);margin:0 0 28px}
+.namefield{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 30px}
+.namefield input{border:none;border-bottom:2px solid var(--ink);background:transparent;font-size:19px;padding:6px 4px;min-width:240px;color:var(--ink)}
+.namefield input:focus{outline:none;border-bottom-color:var(--good);background:#F9F0F7}
+.namefield label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+.plan{border-top:1px solid var(--rule);margin:0 0 30px}
+.plan-row{display:flex;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--rule)}
+.plan-tag{width:30px;height:16px;flex:none;border-radius:2px 5px 3px 4px;transform:skewX(-9deg);margin-top:3px}
+.plan-name{font-weight:700;font-size:15px;flex:1;min-width:150px}
+.plan-desc{font-family:var(--read);font-size:14px;color:var(--slate);flex:2.2;min-width:180px}
+.plan-n{font-family:var(--mono);font-size:12px;color:var(--slate);white-space:nowrap}
+.btn{border:2px solid var(--ink);background:var(--ink);color:#fff;font-weight:700;font-size:15px;padding:12px 24px;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--hl-1)}
+.btn:active{transform:translate(0,0);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{box-shadow:4px 4px 0 var(--hl-2)}
+.btn.sm{font-size:13px;padding:8px 14px}
+.btn:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* ---------- quiz layout ---------- */
+.layout{display:grid;grid-template-columns:1fr 232px;gap:34px;align-items:start}
+.card{background:var(--card);border:2px solid var(--ink);padding:26px 28px 24px;position:relative}
+.card::after{content:"";position:absolute;inset:6px -6px -6px 6px;border:2px solid var(--ink);z-index:-1;opacity:.16}
+.qhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--rule)}
+.qnum{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.06em}
+.sectag{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;padding:4px 9px;border-radius:2px 6px 3px 5px;font-weight:700;color:var(--ink)}
+.qhead .spacer{flex:1}
+.instr{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--slate)}
+.prompt{font-size:17px;font-weight:600;margin:0 0 16px;line-height:1.5}
+.prompt b{font-weight:800;border-bottom:2px solid var(--hl-1);padding-bottom:1px}
+.sentence{font-family:var(--read);font-size:19px;line-height:1.7;border-left:4px solid var(--hl-1);padding:2px 0 2px 16px;margin:0 0 20px}
+.passage{font-family:var(--read);font-size:16px;line-height:1.75;background:#F3ECF2;border:1px solid var(--rule);padding:16px 18px;margin:0 0 20px}
+.passage h4{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 8px;font-weight:700}
+
+/* ---------- diagram ---------- */
+.figwrap{border:1.5px solid var(--rule);border-top:3px solid var(--hl-2);background:#F7F2F8;padding:10px;margin:0 0 18px;text-align:center}
+.figwrap h4{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:2px 0 4px;font-weight:700}
+svg.fig{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
+.fig .art{fill:#fff;stroke:var(--ink);stroke-width:2.4;stroke-linejoin:round}
+.fig .art2{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round}
+.fig .soft{fill:#F6CBE0;stroke:var(--ink);stroke-width:2;stroke-linejoin:round}
+.fig .limb{fill:none;stroke:var(--ink);stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.fig .limb2{fill:none;stroke:var(--ink);stroke-width:8;stroke-linecap:round}
+.fig .dark{fill:#33153A;stroke:var(--ink);stroke-width:2.2}
+.fig .lead{stroke:var(--ink);stroke-width:1.4;fill:none;stroke-dasharray:4 3}
+.fig .lead.on{stroke-width:2.4;stroke-dasharray:none}
+.fig .dot{fill:var(--ink);stroke:#fff;stroke-width:2.2}
+.fig .dot.on{fill:var(--bad);stroke:#fff}
+.fig .tongue{fill:#D8629C;stroke:var(--ink);stroke-width:2;stroke-linejoin:round}
+.fig .lab{fill:#fff;stroke:var(--ink);stroke-width:2}
+.fig .lab.on{fill:var(--hl-1)}
+.fig .lab.got{fill:var(--good);stroke:var(--good)}
+.fig .labtx{font-family:"Courier New",monospace;font-size:14px;font-weight:700;fill:var(--ink);text-anchor:middle;dominant-baseline:central}
+.fig .lab.got + .labtx{fill:#fff}
+.fig .word{font-family:Georgia,serif;font-size:16px;fill:var(--ink)}
+.fig .ring{fill:none;stroke:var(--bad);stroke-width:2.5;opacity:.9}
+@media (prefers-reduced-motion:no-preference){
+  .fig .ring{animation:ping 1.6s ease-out infinite}
+  @keyframes ping{0%{r:9;opacity:.9}70%{r:22;opacity:0}100%{opacity:0}}
+}
+
+/* ---------- options ---------- */
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;border:1.5px solid var(--rule);background:#fff;padding:12px 14px;font-size:15.5px;color:var(--ink);line-height:1.45;transition:border-color .12s,background .12s}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt .key{font-family:var(--mono);font-weight:700;font-size:13px;flex:none;width:22px;height:22px;border:1.5px solid var(--ink);display:grid;place-items:center;margin-top:1px}
+.opt.sel{border-color:var(--ink);background:#FCF7FB}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.right .key{background:var(--good);border-color:var(--good);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.opt.wrong .key{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt:disabled{cursor:default}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opts.row .opt{flex:1;min-width:150px}
+
+/* ---------- typed ---------- */
+.gapwrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:4px 0 0}
+.gap{border:none;border-bottom:2.5px solid var(--ink);background:#FCF7FB;font-size:20px;font-family:var(--read);padding:7px 12px;min-width:200px;color:var(--ink)}
+.gap:focus{outline:none;border-bottom-color:var(--good);background:#F6EAF3}
+.gap.right{border-bottom-color:var(--good);background:var(--good-bg)}
+.gap.wrong{border-bottom-color:var(--bad);background:var(--bad-bg)}
+
+/* ---------- listening ---------- */
+.audiobox{border:1.5px dashed var(--ink);padding:16px 18px;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:#F5F2FA}
+.playbtn{border:2px solid var(--ink);background:var(--hl-6);color:var(--ink);font-weight:700;font-size:14px;padding:10px 18px;display:flex;gap:9px;align-items:center}
+.playbtn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.playbtn.playing{background:var(--ink);color:#fff}
+.speedbtn{border:1.5px solid var(--ink);background:transparent;font-family:var(--mono);font-size:12px;padding:8px 11px;letter-spacing:.05em}
+.speedbtn.on{background:var(--ink);color:#fff}
+.audionote{font-family:var(--mono);font-size:11px;color:var(--slate);letter-spacing:.05em}
+.transcript{font-family:var(--read);font-size:16px;background:#F3ECF2;border-left:4px solid var(--hl-6);padding:10px 14px;margin:12px 0 0}
+.notes{border:1px solid var(--rule);border-top:3px solid var(--hl-6);padding:14px 16px;margin:0 0 16px;background:#fff}
+.notes h4{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px;color:var(--slate);font-weight:700}
+.notes p{font-family:var(--read);font-size:17px;margin:0;line-height:1.7}
+
+/* ---------- feedback ---------- */
+.fb{border-left:5px solid var(--good);background:var(--good-bg);padding:15px 17px;margin:18px 0 0}
+.fb.no{border-left-color:var(--bad);background:var(--bad-bg)}
+.fb-top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 0 9px}
+.fb-verdict{font-weight:800;font-size:15px}
+.fb-pts{font-family:var(--mono);font-size:12px;color:var(--slate)}
+.fb p{margin:0 0 8px;font-size:15px;line-height:1.55}
+.fb p:last-child{margin-bottom:0}
+.wordcard{background:#fff;border:1px solid var(--rule);padding:12px 14px;margin:10px 0 0}
+.wordcard .w{font-weight:800;font-size:17px}
+.wordcard .pos{font-family:var(--mono);font-size:11px;color:var(--slate);text-transform:uppercase;letter-spacing:.1em;margin-left:8px}
+.wordcard .ar{font-family:var(--ar);font-size:19px;direction:rtl;display:block;margin:5px 0 6px;color:var(--ink-2)}
+.wordcard .def{font-family:var(--read);font-size:15px;color:var(--ink-2);margin:0 0 6px}
+.wordcard .ex{font-family:var(--read);font-size:14.5px;color:var(--slate);font-style:italic;margin:0}
+
+/* ---------- nav ---------- */
+.nav{display:flex;gap:12px;align-items:center;margin:22px 0 0;flex-wrap:wrap}
+.nav .spacer{flex:1}
+
+/* ---------- rail ---------- */
+.rail{position:sticky;top:20px}
+.rail-block{border:2px solid var(--ink);background:#fff;padding:14px;margin:0 0 14px}
+.rail-block h3{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin:0 0 11px;color:var(--slate);font-weight:700}
+.score-big{font-size:36px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.score-big span{font-size:16px;color:var(--slate);font-weight:600}
+.stat{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;padding:4px 0;border-bottom:1px dotted var(--rule)}
+.stat:last-child{border-bottom:none}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.cell{aspect-ratio:1;border:1px solid var(--rule);background:#fff;font-family:var(--mono);font-size:11px;color:var(--slate);display:grid;place-items:center;padding:0}
+.cell:hover{border-color:var(--ink)}
+.cell.now{outline:2px solid var(--ink);outline-offset:-2px;font-weight:700;color:var(--ink)}
+.cell.ok{background:var(--good);border-color:var(--good);color:#fff}
+.cell.no{background:var(--bad);border-color:var(--bad);color:#fff}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--ink);padding:4px 7px;background:var(--hl-1);font-weight:700;animation:pop .4s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.rail-empty{font-family:var(--mono);font-size:11px;color:var(--slate)}
+
+/* ---------- results ---------- */
+.results{max-width:880px}
+.bigscore{display:flex;flex-wrap:wrap;gap:34px;align-items:flex-end;border-bottom:2px solid var(--ink);padding:0 0 22px;margin:0 0 26px}
+.bigscore .n{font-size:clamp(56px,11vw,96px);font-weight:800;letter-spacing:-.05em;line-height:.9}
+.bigscore .n small{font-size:.32em;color:var(--slate)}
+.bigscore .meta{font-family:var(--mono);font-size:12px;color:var(--slate);letter-spacing:.06em;line-height:1.9}
+.readiness{border:2px solid var(--ink);padding:14px 18px;background:var(--hl-1)}
+.readiness .lab{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.readiness .val{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.readiness .cap{font-family:var(--mono);font-size:10px;color:var(--ink-2);margin-top:4px}
+h2.sec{font-size:22px;font-weight:800;letter-spacing:-.03em;margin:34px 0 14px;text-transform:lowercase}
+.bar-row{display:flex;align-items:center;gap:12px;margin:0 0 9px}
+.bar-name{width:200px;flex:none;font-size:14px;font-weight:600}
+.bar-track{flex:1;height:20px;background:#E8DEE7;border:1px solid var(--rule)}
+.bar-fill{display:block;height:100%;transition:width .8s cubic-bezier(.2,.8,.3,1)}
+.bar-num{font-family:var(--mono);font-size:12px;width:52px;text-align:right;flex:none}
+.revise{display:flex;flex-wrap:wrap;gap:8px}
+.revise .rw{font-family:var(--read);font-size:16px;border:1.5px solid var(--ink);padding:7px 13px;background:#fff}
+.revise .rw .ar{font-family:var(--ar);direction:rtl;color:var(--slate);font-size:15px;margin-left:8px}
+.rev-item{border-left:4px solid var(--bad);background:#fff;border-top:1px solid var(--rule);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:13px 16px;margin:0 0 10px}
+.rev-q{font-family:var(--mono);font-size:11px;color:var(--slate);letter-spacing:.08em;margin:0 0 5px}
+.rev-p{font-size:15px;margin:0 0 7px;font-family:var(--read)}
+.rev-a{font-size:14px;margin:0}
+.rev-a b{color:var(--good)}
+.rev-a s{color:var(--bad)}
+.cert{border:3px double var(--ink);padding:38px 34px;text-align:center;background:#fff;margin:16px 0 0;
+  background-image:radial-gradient(circle at 12% 18%,var(--hl-2) 0 1.5px,transparent 1.6px),
+                   radial-gradient(circle at 88% 82%,var(--hl-1) 0 1.5px,transparent 1.6px);
+  background-size:26px 26px}
+.cert .k{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--slate)}
+.cert .who{font-family:var(--read);font-size:clamp(26px,5vw,38px);margin:14px 0 6px}
+.cert .what{font-family:var(--read);font-size:16px;color:var(--ink-2);max-width:470px;margin:0 auto 18px}
+.cert .sc{font-size:44px;font-weight:800;letter-spacing:-.04em}
+.cert .sig{margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--slate)}
+
+footer{border-top:2px solid var(--ink);margin-top:56px;padding:16px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
+footer .spacer{flex:1}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:99}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(140%);visibility:hidden;background:var(--ink);color:#fff;padding:12px 20px;font-size:14px;font-weight:600;z-index:120;transition:transform .3s,visibility .3s;max-width:88vw}
+#toast.show{visibility:visible;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:22px}
+  .rail{position:static;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .rail-block{margin:0}
+  .rail-block.gridblock{grid-column:1/-1}
+  .grid{grid-template-columns:repeat(10,1fr)}
+  .card::after{display:none}
+}
+@media (max-width:560px){
+  .wrap{padding:0 14px 60px}
+  .card{padding:18px 16px}
+  .bar-name{width:100%}
+  .bar-row{flex-wrap:wrap}
+  .rail{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+@media print{.noprint,#toast,#confetti{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <h1>wordlist <span class="hl" style="--swipe:var(--hl-2)">two</span></h1>
+      <p class="sub">B1+ Vocabulary · Fall · "Health" · 40 words · 50 questions</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="chip">Target: IELTS Band 6</div>
+  </header>
+  <main id="app"></main>
+  <footer>
+    <span>B1+ Vocabulary List 2 (Fall) — Health</span>
+    <span class="spacer"></span>
+    <span>Designed by: Nazila Motahari</span>
+  </footer>
+</div>
+<canvas id="confetti"></canvas>
+<div id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="loadfile" accept=".json" style="display:none">
+<script>
+/* =========================================================================
+   B1+ Vocabulary List 2 (Fall) — "Health"
+   50-question IELTS-style quiz engine
+   ========================================================================= */
+
+/* ---------------- Word data ---------------- */
+const W = {
+  ankle:{pos:"noun",ar:"كاحل",def:"The part of your leg that is just above your foot",ex:"He hurt his ankle playing football."},
+  bandage:{pos:"noun",ar:"ضمادة",def:"A long piece of cloth that you wrap around a part of the body that is hurt",ex:"She put a small bandage round her finger."},
+  beef:{pos:"noun",ar:"لحم بقر",def:"The meat of a cow",ex:"People in England often eat roast beef on Sunday."},
+  blind:{pos:"adjective",ar:"كفيف / أعمى",def:"Not able to see",ex:"She's been blind since she was born."},
+  cancer:{pos:"noun",ar:"سرطان",def:"A serious disease caused when some cells in the body grow too much and damage other cells",ex:"He died of lung cancer."},
+  cheek:{pos:"noun",ar:"خدّ",def:"One of the two soft parts of your face below your eyes",ex:"Tears ran down her cheeks."},
+  chin:{pos:"noun",ar:"ذقن",def:"The bottom part of your face, below your mouth",ex:"She hurt her chin when she fell off her bicycle."},
+  condition:{pos:"noun",ar:"حالة",def:"The state that something or someone is in",ex:"My car is five years old, but it's in really good condition."},
+  contest:{pos:"noun",ar:"مسابقة",def:"A competition, especially one in which individuals rather than groups compete",ex:"She's won a lot of spelling contests."},
+  diagram:{pos:"noun",ar:"رسم توضيحي",def:"A simple picture showing what something looks like or how it works",ex:"The teacher drew a diagram showing how the blood flows through the heart."},
+  disabled:{pos:"adjective",ar:"من ذوي الإعاقة",def:"Having an illness or condition that makes it difficult to do the things that other people do",ex:"The accident left him disabled. He couldn't walk."},
+  elbow:{pos:"noun",ar:"مِرفَق / كوع",def:"The part in the middle of your arm where it bends",ex:"Her arm was bandaged from the elbow to the fingers."},
+  "give up":{pos:"phrasal verb",ar:"يُقلِع عن",def:"To stop doing or having something bad, such as smoking",ex:"I gave up smoking two years ago."},
+  heel:{pos:"noun",ar:"كعب",def:"The back part of your foot, below your ankle; also the part of a shoe under it",ex:"I hate wearing shoes with high heels."},
+  inform:{pos:"verb",ar:"يُبلِغ / يُخبِر",def:"To tell someone about something",ex:"He informed us that we would have to leave."},
+  ingredient:{pos:"noun",ar:"مُكوِّن",def:"One of the different foods that a particular type of food is made from",ex:"I don't have the ingredients for a cake."},
+  knee:{pos:"noun",ar:"رُكبة",def:"The middle part of your leg where it bends",ex:"The baby was moving around on its hands and knees."},
+  lip:{pos:"noun",ar:"شفة",def:"One of the two soft, red edges of the mouth",ex:"He licked his lips."},
+  membership:{pos:"noun",ar:"عضوية",def:"The fact of belonging to a group or an organization",ex:"You have to apply for membership of the sports club."},
+  outdoor:{pos:"adjective",ar:"في الهواء الطلق",def:"Happening or used outside and not in a building",ex:"The doctor told him he needed to do more outdoor activities."},
+  pants:{pos:"noun",ar:"ملابس داخلية (بريطاني) / بنطال (أمريكي)",def:"In British English, a piece of clothing worn next to the skin on the lower body; in American English, trousers",ex:"Which drawer do pants go in?"},
+  patient:{pos:"adjective / noun",ar:"صبور / مريض",def:"Adjective: able to stay calm and not get upset. Noun: someone who is being treated by a doctor or nurse",ex:"You need to be patient with children. · She sees ten patients every hour."},
+  pill:{pos:"noun",ar:"حبة دواء",def:"A small, round, hard piece of medicine that you swallow",ex:"She couldn't sleep so she took a sleeping pill."},
+  powder:{pos:"noun",ar:"مسحوق / بودرة",def:"A dry substance made of many small, loose grains",ex:"Put the powder in some warm water and then drink it."},
+  pregnant:{pos:"adjective",ar:"حامل",def:"A pregnant woman has a baby growing inside her body",ex:"She's five months pregnant."},
+  raw:{pos:"adjective",ar:"نيء / غير مطبوخ",def:"Not cooked",ex:"She got ill from eating raw fish."},
+  recover:{pos:"verb",ar:"يتعافى",def:"To become healthy again after being sick or hurt",ex:"It took her a long time to recover after her heart operation."},
+  shave:{pos:"verb",ar:"يحلق",def:"To cut hair off your face or body",ex:"He shaves every day."},
+  shoulder:{pos:"noun",ar:"كتف",def:"The place where your arm joins your body next to your neck",ex:"He injured his shoulder while playing basketball."},
+  skin:{pos:"noun",ar:"جلد / بشرة",def:"The outer layer of a person or animal's body",ex:"He went to see a doctor because he had spots on his skin."},
+  sore:{pos:"adjective",ar:"مؤلم / مُلتهب",def:"Painful, especially when touched",ex:"I have a cold and a sore throat."},
+  tablet:{pos:"noun",ar:"قرص دواء",def:"A small, round thing containing medicine that you swallow",ex:"You need to take this sleeping tablet."},
+  tear:{pos:"noun / verb",ar:"دمعة / يُمزِّق",def:"Noun (rhymes with 'here'): a drop of water from your eye. Verb (rhymes with 'hair'): to pull paper or cloth into pieces",ex:"I was in tears when I broke my arm. · Tear the paper in two."},
+  throat:{pos:"noun",ar:"حَلْق / حنجرة",def:"The back part of your mouth and the part inside your neck",ex:"He has a sore throat so he can't talk properly."},
+  thumb:{pos:"noun",ar:"إبهام",def:"The short, thick finger on the side of your hand",ex:"She hit her thumb with the hammer."},
+  tongue:{pos:"noun",ar:"لسان",def:"The soft thing inside your mouth that you use for tasting and speaking",ex:"I burned my tongue on some soup last night."},
+  track:{pos:"noun",ar:"مسار / حلبة سباق",def:"A narrow path or road; also a path, often circular, used for races",ex:"The house is at the end of a long track. · The runners are on their final lap of the track."},
+  "under control":{pos:"phrase",ar:"تحت السيطرة",def:"If a situation is under control, things are happening in the way that you want them to",ex:"Don't worry — everything's under control."},
+  unexpected:{pos:"adjective",ar:"غير متوقع",def:"Surprising you because you did not know it was going to happen",ex:"His illness was unexpected as he is a very healthy person."},
+  virus:{pos:"noun",ar:"فيروس",def:"A program secretly put onto a computer to destroy the information stored on it; also a very small living thing that causes illness",ex:"I got a virus when I downloaded the attachment on an email."}
+};
+
+/* ---------------- Sections ---------------- */
+const SECTIONS = [
+  {id:1,name:"Meaning in context",   hl:"var(--hl-1)", instr:"Choose the correct meaning",        desc:"Work out what the word means from the sentence around it."},
+  {id:2,name:"Label the diagram",    hl:"var(--hl-2)", instr:"Write ONE WORD only",               desc:"An IELTS Listening and Reading task — name the marked part."},
+  {id:3,name:"Listening: clinic notes",hl:"var(--hl-6)",instr:"Listen, then write ONE WORD only", desc:"Hear the nurse or doctor and complete the patient notes."},
+  {id:4,name:"Word partners",        hl:"var(--hl-4)", instr:"Choose the word that fits",         desc:"Collocations — the words English puts together, like 'sore throat'."},
+  {id:5,name:"Which meaning?",       hl:"var(--hl-5)", instr:"Choose the meaning used here",      desc:"Some words have two meanings. The sentence decides which one."},
+  {id:6,name:"Paraphrase match",     hl:"var(--hl-3)", instr:"Choose the closest word",           desc:"IELTS rewrites ideas. Spot the word with the same meaning."},
+  {id:7,name:"Odd one out",          hl:"var(--hl-7)", instr:"Choose the word that does not fit", desc:"Group words by meaning — a fast way to fix them in memory."},
+  {id:8,name:"True / False / Not Given",hl:"var(--hl-8)",instr:"Choose TRUE, FALSE or NOT GIVEN", desc:"Read the clinic notice and decide what it really says."}
+];
+
+/* ---------------- Diagrams ---------------- */
+const FACE_ART = `
+<ellipse class="art" cx="170" cy="146" rx="80" ry="97"/>
+<path class="art2" d="M94 122 Q112 60 170 56 Q228 60 246 122"/>
+<ellipse class="art" cx="88" cy="152" rx="11" ry="18"/>
+<ellipse class="art" cx="252" cy="152" rx="11" ry="18"/>
+<path class="art2" d="M118 114 Q136 105 154 114"/>
+<path class="art2" d="M186 114 Q204 105 222 114"/>
+<ellipse class="art" cx="136" cy="132" rx="12" ry="8"/>
+<ellipse class="art" cx="204" cy="132" rx="12" ry="8"/>
+<circle cx="136" cy="132" r="4" fill="#2E1230"/>
+<circle cx="204" cy="132" r="4" fill="#2E1230"/>
+<path class="art2" d="M170 142 L163 170 Q170 176 178 170"/>
+<ellipse class="dark" cx="170" cy="196" rx="31" ry="15"/>
+<path class="tongue" d="M152 195 Q170 187 188 195 Q186 205 170 205 Q154 205 152 195 Z"/>
+<path class="soft" d="M136 190 Q145 172 170 178 Q195 172 204 190 Q194 181 170 181 Q146 181 136 190 Z"/>
+<path class="soft" d="M138 208 Q154 214 170 214 Q186 214 202 208 Q196 228 170 228 Q144 228 138 208 Z"/>`;
+
+const BODY_ART = `
+<circle class="art" cx="170" cy="46" r="26"/>
+<path class="limb" d="M170 72 L170 88"/>
+<path class="art" d="M128 90 Q170 78 212 90 L206 210 Q170 220 134 210 Z"/>
+<path class="limb" d="M132 96 L94 164 L82 226"/>
+<path class="limb" d="M208 96 L246 164 L258 226"/>
+<circle class="art" cx="78" cy="240" r="13"/>
+<circle class="art" cx="262" cy="240" r="13"/>
+<path class="limb2" d="M272 232 L284 220"/>
+<path class="limb2" d="M68 232 L56 220"/>
+<path class="limb" d="M150 214 L140 318 L134 398"/>
+<path class="limb" d="M190 214 L200 318 L206 398"/>
+<path class="limb" d="M134 400 L112 410"/>
+<path class="limb" d="M206 400 L228 410"/>`;
+
+const FOOT_ART = `
+<path class="art" d="M140 10 L176 10 L180 100 L136 100 Z"/>
+<path class="art" d="M180 100 Q196 130 226 148 Q250 158 258 166 Q262 174 250 176 L112 176 Q88 174 88 154 Q90 132 136 100 Z"/>
+<path class="art2" d="M132 176 Q170 165 210 176"/>`;
+
+const DIAGRAMS = {
+ face:{ title:"The face and mouth", vb:"-70 0 480 300", art:FACE_ART,
+   pts:{
+     cheek: {x:120,y:172, lx:44,  ly:108, side:"l"},
+     lip:   {x:158,y:218, lx:44,  ly:264, side:"l"},
+     tongue:{x:170,y:198, lx:302, ly:190, side:"r"},
+     chin:  {x:170,y:236, lx:252, ly:286, side:"r"}
+   }},
+ body:{ title:"The body", vb:"-70 0 480 440", art:BODY_ART,
+   pts:{
+     shoulder:{x:132,y:94,  lx:46, ly:60,  side:"l"},
+     elbow:   {x:94, y:164, lx:36, ly:168, side:"l"},
+     thumb:   {x:279,y:225, lx:306,ly:192, side:"r"},
+     knee:    {x:200,y:318, lx:306,ly:326, side:"r"}
+   }},
+ foot:{ title:"The foot (side view)", vb:"-70 0 480 220", art:FOOT_ART,
+   pts:{
+     ankle:{x:157,y:96,  lx:282, ly:50, side:"r"},
+     heel: {x:104,y:162, lx:34,  ly:100, side:"l"}
+   }}
+};
+
+/* ---------------- Clinic notice (Section 8) ---------------- */
+const NOTICE = `The Al Wahda Health Centre is open from eight in the morning until six in the evening. Patients must inform the centre at least one day in advance if they cannot come to an appointment. Membership is free for students, but other visitors pay a small fee. The centre also runs a weekly outdoor exercise class in the park next door, which is popular with older patients who are recovering from operations. Smoking is not allowed anywhere in the building, and staff will happily help anyone who wants to give it up.`;
+
+/* ---------------- The 50 questions ---------------- */
+const Q = [
+/* ===== SECTION 1 — Meaning in context (1–8) ===== */
+{s:1,w:"blind",sent:"She has been ~blind~ since she was born.",prompt:"What does <b>blind</b> mean here?",
+ opts:["Not able to see","Not able to speak","Not able to hear","Not able to walk"],a:0,
+ why:"<b>Blind</b> refers to sight only. The word for hearing is <i>deaf</i>; for difficulty walking you might say <i>disabled</i>."},
+{s:1,w:"disabled",sent:"The accident left him ~disabled~. He couldn't walk.",prompt:"What does <b>disabled</b> mean here?",
+ opts:["Refusing to see a doctor about an injury","Having a condition that limits daily life","Feeling extremely tired after an accident","Unable to pay for medical treatment"],a:1,
+ why:"<b>Disabled</b> describes a lasting illness or condition, not a temporary feeling. The second sentence — <i>he couldn't walk</i> — is the clue."},
+{s:1,w:"raw",sent:"She got ill from eating ~raw~ fish.",prompt:"What does <b>raw</b> mean here?",
+ opts:["Extremely expensive to buy","Very spicy and hot","Not cooked in any way","Frozen completely solid"],a:2,
+ why:"<b>Raw</b> means uncooked. In IELTS Reading it often appears with food safety or with <i>raw materials</i> — materials in their natural state."},
+{s:1,w:"outdoor",sent:"The doctor told him he needed to do more ~outdoor~ activities.",prompt:"What does <b>outdoor</b> mean here?",
+ opts:["Done early in the morning each day","Costing very little money to join","Done with a large group of people","Happening outside, not in a building"],a:3,
+ why:"<b>Outdoor</b> is an adjective and goes before a noun: <i>outdoor activities</i>. The adverb is <i>outdoors</i>: <i>he exercises outdoors</i>."},
+{s:1,w:"pregnant",sent:"She's five months ~pregnant~.",prompt:"What does <b>pregnant</b> mean here?",
+ opts:["Having a baby growing inside her body","Staying in hospital for tests","Working as a nurse in a hospital","Recovering slowly after an operation"],a:0,
+ why:"<b>Pregnant</b> is used with a length of time: <i>five months pregnant</i>, <i>eight weeks pregnant</i>."},
+{s:1,w:"skin",sent:"He went to see a doctor because he had spots on his ~skin~.",prompt:"What does <b>skin</b> mean here?",
+ opts:["The hair that grows on the head","The outer layer of the body","The soft inside of the mouth","The small bones of the hand"],a:1,
+ why:"<b>Skin</b> covers the whole body. It is also used for fruit and vegetables: <i>banana skin</i>, <i>potato skins</i>."},
+{s:1,w:"contest",sent:"She's won a lot of spelling ~contests~.",prompt:"What does <b>contest</b> mean here?",
+ opts:["A long written examination","A short training course for staff","A competition between individuals","A club for young people after school"],a:2,
+ why:"A <b>contest</b> is a competition, usually between individuals rather than teams. Note the stress: <i>CON-test</i> as a noun."},
+{s:1,w:"membership",sent:"You have to apply for ~membership~ of the sports club.",prompt:"What does <b>membership</b> mean here?",
+ opts:["A payment made directly to a doctor","A form of official photo identification","Permission to enter a building once","Belonging to a group or organization"],a:3,
+ why:"<b>Membership</b> is the noun from <i>member</i>. It appears constantly in IELTS Listening Part 1, usually with a fee and a form."},
+
+/* ===== SECTION 2 — Label the diagram (9–18) ===== */
+{s:2,w:"cheek",diagram:"face",point:"cheek",a:"cheek",accept:["cheek"],
+ prompt:"Label the marked part of the face. Write ONE WORD only.",
+ why:"<b>Cheek</b> — the soft part of the face below the eye. Tears run down your <i>cheeks</i>."},
+{s:2,w:"lip",diagram:"face",point:"lip",a:"lip",accept:["lip"],
+ prompt:"Label the marked part of the face. Write ONE WORD only.",
+ why:"<b>Lip</b> — the soft red edge of the mouth. You have two <i>lips</i>: an upper lip and a lower lip."},
+{s:2,w:"tongue",diagram:"face",point:"tongue",a:"tongue",accept:["tongue"],
+ prompt:"Label the marked part inside the mouth. Write ONE WORD only.",
+ why:"<b>Tongue</b> — used for tasting and speaking. The spelling is difficult: <i>t-o-n-g-u-e</i>, but it sounds like /tʌŋ/."},
+{s:2,w:"chin",diagram:"face",point:"chin",a:"chin",accept:["chin"],
+ prompt:"Label the marked part of the face. Write ONE WORD only.",
+ why:"<b>Chin</b> — the bottom of the face, below the mouth. Do not confuse it with <i>cheek</i>, which is at the side."},
+{s:2,w:"shoulder",diagram:"body",point:"shoulder",a:"shoulder",accept:["shoulder"],
+ prompt:"Label the marked part of the body. Write ONE WORD only.",
+ why:"<b>Shoulder</b> — where the arm joins the body. The <i>l</i> is silent-ish and the ending is <i>-er</i>: <i>s-h-o-u-l-d-e-r</i>."},
+{s:2,w:"elbow",diagram:"body",point:"elbow",a:"elbow",accept:["elbow"],
+ prompt:"Label the marked part of the body. Write ONE WORD only.",
+ why:"<b>Elbow</b> — where the arm bends. The matching joint in the leg is the <i>knee</i>."},
+{s:2,w:"thumb",diagram:"body",point:"thumb",a:"thumb",accept:["thumb"],
+ prompt:"Label the marked part of the hand. Write ONE WORD only.",
+ why:"<b>Thumb</b> — the short, thick finger at the side of the hand. The <i>b</i> is silent, but you must still write it."},
+{s:2,w:"knee",diagram:"body",point:"knee",a:"knee",accept:["knee"],
+ prompt:"Label the marked part of the body. Write ONE WORD only.",
+ why:"<b>Knee</b> — where the leg bends. The <i>k</i> is silent, like in <i>know</i> and <i>knife</i>."},
+{s:2,w:"ankle",diagram:"foot",point:"ankle",a:"ankle",accept:["ankle"],
+ prompt:"Label the marked part of the leg. Write ONE WORD only.",
+ why:"<b>Ankle</b> — the joint just above the foot. A very common sports injury: <i>he twisted his ankle</i>."},
+{s:2,w:"heel",diagram:"foot",point:"heel",a:"heel",accept:["heel"],
+ prompt:"Label the marked part of the foot. Write ONE WORD only.",
+ why:"<b>Heel</b> — the back of the foot, below the ankle. The same word names the part of a shoe under it: <i>high heels</i>."},
+
+/* ===== SECTION 3 — Listening: clinic notes (19–26) ===== */
+{s:3,w:"powder",listen:true,audio:"Mix one spoon of the powder in warm water and drink it after your evening meal.",
+ notes:"Mix one spoon of ______ in warm water · after evening meal",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"powder",accept:["powder"],
+ why:"<b>Powder</b> — a dry substance of small loose grains. Medicine comes as a <i>powder</i>, a <i>pill</i> or a <i>tablet</i>."},
+{s:3,w:"beef",listen:true,audio:"The patient cannot eat beef, so please give her the chicken or the fish option.",
+ notes:"Cannot eat ______ · give chicken or fish",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"beef",accept:["beef"],
+ why:"<b>Beef</b> is the meat of a cow. English uses different words for the animal and the meat: cow → beef, pig → pork, sheep → lamb."},
+{s:3,w:"ingredient",listen:true,audio:"Please check the label carefully, because nuts are an ingredient in many of these snacks.",
+ notes:"Nuts are an ______ in many snacks — check the label",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"ingredient",accept:["ingredient"],
+ why:"<b>Ingredient</b> — one of the foods something is made from. Singular here because of <i>an</i>: listen for that article, it tells you the form."},
+{s:3,w:"pill",listen:true,audio:"Take one pill in the morning and one in the evening, always with food.",
+ notes:"One ______ morning + evening · always with food",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"pill",accept:["pill"],
+ why:"<b>Pill</b> — singular after <i>one</i>. Writing <i>pills</i> would lose the mark even though the meaning is close."},
+{s:3,w:"throat",listen:true,audio:"The doctor will examine your throat first, and then listen to your chest.",
+ notes:"Doctor examines ______ first, then the chest",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"throat",accept:["throat"],
+ why:"<b>Throat</b> — inside the neck, behind the mouth. Note the spelling <i>-oa-</i>, like <i>coat</i> and <i>boat</i>."},
+{s:3,w:"diagram",listen:true,audio:"Look at the diagram on page four, which shows how the blood moves through the heart.",
+ notes:"See the ______ on page 4 — blood through the heart",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"diagram",accept:["diagram"],
+ why:"<b>Diagram</b> — a simple picture that explains something. This is also the word IELTS uses in its own instructions: <i>label the diagram</i>."},
+{s:3,w:"inform",listen:true,audio:"Please inform the reception desk if your home address has changed.",
+ notes:"______ reception if address has changed",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"inform",accept:["inform"],
+ why:"<b>Inform</b> is the formal word for <i>tell</i>. After <i>please</i> you need the base verb, so not <i>informed</i>."},
+{s:3,w:"condition",listen:true,audio:"Her condition has improved a great deal since Monday, so she may go home on Friday.",
+ notes:"Patient's ______ improved since Monday · home Friday?",
+ prompt:"Listen and complete the patient notes with ONE WORD only.",a:"condition",accept:["condition"],
+ why:"<b>Condition</b> here means the state a person is in. The same word can mean an illness: <i>a heart condition</i>."},
+
+/* ===== SECTION 4 — Word partners (27–32) ===== */
+{s:4,w:"sore",sent:"I've got a cold and I can't swallow. My throat is really ______.",prompt:"Which word goes with <b>throat</b>?",
+ opts:["sore","patient","blind","unexpected"],a:0,
+ why:"<b>Sore throat</b> is a fixed pair — you will hear it in almost every IELTS health recording. <i>Sore</i> means painful when touched or used."},
+{s:4,w:"give up",sent:"After twenty years, he finally ______ smoking.",prompt:"Which phrasal verb fits?",
+ opts:["looked after","gave up","took up","put on"],a:1,
+ why:"<b>Give up</b> = stop a bad habit. <i>Take up</i> is the opposite — to start a new activity: <i>she took up swimming</i>."},
+{s:4,w:"shave",sent:"He cut his chin this morning while he was ______.",prompt:"Which word fits?",
+ opts:["sneezing","swimming","shaving","shivering"],a:2,
+ why:"<b>Shave</b> = cut hair off the face or body — which is why the cut is on his <i>chin</i>. The others have nothing to do with hair."},
+{s:4,w:"under control",sent:"Don't worry about the patient in room four — everything is ______.",prompt:"Which phrase fits?",
+ opts:["on track","in condition","out of order","under control"],a:3,
+ why:"<b>Under control</b> = happening the way you want. <i>Out of order</i> means a machine is broken, not a situation."},
+{s:4,w:"patient",sent:"You need to be very ______ with young children — they learn slowly.",prompt:"Which word fits?",
+ opts:["patient","blind","pregnant","disabled"],a:0,
+ why:"Here <b>patient</b> is the adjective — able to stay calm and wait. The noun <i>a patient</i> is someone a doctor treats."},
+{s:4,w:"bandage",sent:"The nurse cleaned the cut and then put a ______ around his knee.",prompt:"Which word fits?",
+ opts:["powder","bandage","contest","diagram"],a:1,
+ why:"You <b>put a bandage on</b> or <b>around</b> an injury. A <i>powder</i> is swallowed or applied, not wrapped."},
+
+/* ===== SECTION 5 — Which meaning? (33–37) ===== */
+{s:5,w:"tear",sent:"~Tear~ the paper in two and give one half to your partner.",prompt:"Which meaning of <b>tear</b> is used here?",
+ opts:["A drop of water that comes from your eye","To pull paper or cloth into pieces"],a:1,
+ why:"Two different words with the same spelling. The verb <b>tear</b> rhymes with <i>hair</i>; the noun <i>tear</i> (from crying) rhymes with <i>here</i>. Here it is a command, so it is the verb."},
+{s:5,w:"track",sent:"The runners are now on their final lap of the ~track~.",prompt:"Which meaning of <b>track</b> is used here?",
+ opts:["A path, often circular, used for races","A narrow path or road in the countryside"],a:0,
+ why:"<i>Runners</i> and <i>lap</i> tell you this is a sports track. The other meaning appears in sentences like <i>the house is at the end of a long track</i>."},
+{s:5,w:"virus",sent:"I got a ~virus~ when I downloaded the attachment on that email.",prompt:"Which meaning of <b>virus</b> is used here?",
+ opts:["A very small living thing that causes illness","A program secretly put onto a computer to destroy information"],a:1,
+ why:"<i>Downloaded</i> and <i>attachment</i> point to the computer meaning. The same word is also used in health: <i>a flu virus</i>."},
+{s:5,w:"tablet",sent:"You need to take this sleeping ~tablet~ about an hour before bed.",prompt:"Which meaning of <b>tablet</b> is used here?",
+ opts:["A small, flat computer you hold in your hand","A small, round piece of medicine that you swallow"],a:1,
+ why:"<i>Take</i> and <i>sleeping</i> point to medicine. <b>Tablet</b> and <i>pill</i> mean almost the same thing here."},
+{s:5,w:"condition",sent:"My car is five years old, but it's in really good ~condition~.",prompt:"Which meaning of <b>condition</b> is used here?",
+ opts:["The state that something or someone is in","An illness that lasts a long time"],a:0,
+ why:"A car cannot have an illness. <i>In good/bad condition</i> is about state. The medical meaning appears in <i>she has a serious condition</i>."},
+
+/* ===== SECTION 6 — Paraphrase match (38–42) ===== */
+{s:6,w:"unexpected",sent:"His illness came as a ~complete surprise~ — he had always been very healthy.",prompt:"Which word from the list matches the underlined phrase?",
+ opts:["sore","raw","unexpected","disabled"],a:2,
+ why:"<b>Unexpected</b> means exactly <i>surprising because you did not know it would happen</i>. IELTS regularly swaps a phrase for a single adjective like this."},
+{s:6,w:"cancer",sent:"He was treated for ~a serious disease in which cells grow too much and damage the body~.",prompt:"Which word from the list matches the underlined phrase?",
+ opts:["contest","virus","condition","cancer"],a:3,
+ why:"The underlined words are the dictionary definition of <b>cancer</b>. Reading passages often define a term instead of naming it."},
+{s:6,w:"recover",sent:"It took her several months to ~become healthy again~ after the operation.",prompt:"Which word from the list matches the underlined phrase?",
+ opts:["recover","shave","tear","inform"],a:0,
+ why:"<b>Recover</b> = get well again. Related noun: <i>recovery</i>, as in <i>she made a full recovery</i>."},
+{s:6,w:"give up",sent:"She ~stopped eating~ sugar completely last year.",prompt:"Which phrase from the list matches the underlined words?",
+ opts:["informed","gave up","recovered","tore"],a:1,
+ why:"<b>Give up</b> replaces <i>stop doing something</i>, especially a habit. Note the past form: <i>give → gave → given</i>."},
+{s:6,w:"inform",sent:"The hospital will ~tell~ you when the results are ready.",prompt:"Which word from the list is the more formal version of the underlined word?",
+ opts:["contest","recover","inform","shave"],a:2,
+ why:"<b>Inform</b> is the formal equivalent of <i>tell</i> and is far more likely in a written notice or a recorded announcement."},
+
+/* ===== SECTION 7 — Odd one out (43–46) ===== */
+{s:7,w:"pants",prompt:"Which word does <b>not</b> belong with the others?",
+ opts:["powder","pill","tablet","pants"],a:3,
+ why:"<b>Pants</b> is clothing; the other three are all forms of medicine. In British English <i>pants</i> means underwear, but in American English it means trousers — context tells you which."},
+{s:7,w:"beef",prompt:"Which word does <b>not</b> belong with the others?",
+ opts:["beef","lip","cheek","chin"],a:0,
+ why:"<b>Beef</b> is food; the others are all parts of the face."},
+{s:7,w:"diagram",prompt:"Which word does <b>not</b> belong with the others?",
+ opts:["ankle","diagram","knee","elbow"],a:1,
+ why:"<b>Diagram</b> is a picture; <i>knee</i>, <i>elbow</i> and <i>ankle</i> are all joints — places where the body bends."},
+{s:7,w:"thumb",prompt:"Which word does <b>not</b> belong with the others?",
+ opts:["ingredient","beef","thumb","raw"],a:2,
+ why:"<b>Thumb</b> is part of the hand; the other three all relate to food and cooking."},
+
+/* ===== SECTION 8 — TFNG (47–50) ===== */
+{s:8,w:"inform",tfng:true,prompt:"Patients should tell the centre in advance if they will miss an appointment.",a:0,
+ why:"The notice says patients must <i>inform the centre at least one day in advance</i>. <i>Inform</i> is rewritten as <i>tell</i>, so TRUE."},
+{s:8,w:"membership",tfng:true,prompt:"Students have to pay in order to become members.",a:1,
+ why:"The notice says membership is <i>free for students</i>. The statement says the opposite, so FALSE."},
+{s:8,w:"outdoor",tfng:true,prompt:"The outdoor exercise class was started by a doctor at the centre.",a:2,
+ why:"We are told the class exists and who enjoys it, but nothing about who started it. No information means NOT GIVEN."},
+{s:8,w:"recover",tfng:true,prompt:"The exercise class for patients who are recovering takes place every day.",a:1,
+ why:"The notice says the centre runs a <i>weekly</i> outdoor class, popular with older patients who are <i>recovering</i> from operations. Weekly means once a week, not every day. FALSE."}
+];
+
+const TFNG_OPTS = ["TRUE","FALSE","NOT GIVEN"];
+
+/* ---------------- Badges ---------------- */
+const BADGES = [
+  {id:"first",   label:"First Mark",     test:s=>s.correct>=1},
+  {id:"ten",     label:"Word Collector", test:s=>s.correct>=10},
+  {id:"streak5", label:"Streak ×5",      test:s=>s.bestStreak>=5},
+  {id:"streak10",label:"On Fire ×10",    test:s=>s.bestStreak>=10},
+  {id:"anatomy", label:"Anatomy Expert", test:s=>secCorrect(s,2)>=9},
+  {id:"ear",     label:"Sharp Ear",      test:s=>secCorrect(s,3)>=7},
+  {id:"partner", label:"Collocation Pro",test:s=>secCorrect(s,4)>=5},
+  {id:"sense",   label:"Two Meanings",   test:s=>secCorrect(s,5)>=4},
+  {id:"para",    label:"Paraphrase Pro", test:s=>secCorrect(s,6)>=4},
+  {id:"tfng",    label:"Not Given Ninja",test:s=>secCorrect(s,8)>=4},
+  {id:"half",    label:"Halfway Hero",   test:s=>s.answered>=25},
+  {id:"finish",  label:"Finisher",       test:s=>s.answered>=50}
+];
+
+
+const LOCKED_SECTIONS = [];
+
+/* ---------------- Randomise on every load ----------------
+   Both the question order (within each section) and the answer
+   options change each time the app opens, so neither sequence nor
+   position can be learned or shared between students. The order a
+   student actually saw is stored in state, so a saved file reloads
+   exactly as they left it instead of being scrambled.            */
+Q.forEach((q,k)=>{ q.id=k; if(q.opts){ q._opts0=q.opts.slice(); q._a0=q.a; } });
+const Q0 = Q.slice();
+function groupKey(q){ return q.s + (q.diagram ? "/"+q.diagram : ""); }
+function shuffleQuestions(qorder){
+  if(!qorder){
+    const groups=[], seen={};
+    Q0.forEach(q=>{ const k=groupKey(q);
+      if(!(k in seen)){ seen[k]=groups.length; groups.push([]); }
+      groups[seen[k]].push(q); });
+    qorder=[];
+    groups.forEach(g=>{
+      const ids=g.map(q=>q.id);
+      if(!LOCKED_SECTIONS.includes(g[0].s)){
+        for(let j=ids.length-1;j>0;j--){ const r=Math.floor(Math.random()*(j+1)); [ids[j],ids[r]]=[ids[r],ids[j]]; }
+      }
+      qorder=qorder.concat(ids);
+    });
+  }
+  const byId={}; Q0.forEach(q=>byId[q.id]=q);
+  Q.length=0; qorder.forEach(id=>Q.push(byId[id]));
+  return qorder;
+}
+function shuffleOptions(order){
+  order = order || {};
+  Q.forEach(q=>{
+    if(!q._opts0 || q._opts0.length<2) return;
+    let perm = order[q.id];
+    if(!perm){
+      perm = q._opts0.map((_,k)=>k);
+      for(let j=perm.length-1;j>0;j--){ const r=Math.floor(Math.random()*(j+1)); [perm[j],perm[r]]=[perm[r],perm[j]]; }
+      order[q.id]=perm;
+    }
+    q.opts = perm.map(k=>q._opts0[k]);
+    q.a = perm.indexOf(q._a0);
+  });
+  return order;
+}
+
+/* ---------------- State ---------------- */
+let S=null;
+function newState(name){
+  const st={name:name||"Student", i:0, res:{}, given:{}, points:0, streak:0, bestStreak:0,
+          correct:0, answered:0, badges:[], started:Date.now(), finished:false, rate:1};
+  st.qorder=shuffleQuestions(null);
+  st.order=shuffleOptions(null);
+  return st;
+}
+function secCorrect(s,sec){let n=0;Q.forEach((q,i)=>{if(q.s===sec&&s.res[i]===true)n++});return n;}
+function secTotal(sec){return Q.filter(q=>q.s===sec).length;}
+function sec(id){return SECTIONS.find(x=>x.id===id);}
+
+const el=id=>document.getElementById(id);
+const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+function mark(s,c){return s.replace(/~([^~]+)~/g,(m,p)=>`<span class="hl" style="--swipe:${c}">${p}</span>`);}
+function norm(t){return String(t||"").toLowerCase().trim().replace(/[.,!?;:'"()]/g,"").replace(/\s+/g," ").trim();}
+function toast(m){const t=el("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("show"),2600);}
+
+/* ---------------- Diagram rendering ---------------- */
+function figHTML(dname,activePoint,revealed){
+  const d=DIAGRAMS[dname];
+  const keys=Object.keys(d.pts);
+  let parts="";
+  keys.forEach(k=>{
+    const p=d.pts[k];
+    const isOn = k===activePoint;
+    // the question number for this point
+    const qi = Q.findIndex(q=>q.diagram===dname && q.point===k);
+    const solved = S.res[qi]===true;
+    const num = qi+1;
+    parts += `<line class="lead${isOn?" on":""}" x1="${p.x}" y1="${p.y}" x2="${p.lx}" y2="${p.ly}"/>`;
+    parts += `<circle class="dot${isOn?" on":""}" cx="${p.x}" cy="${p.y}" r="4.5"/>`;
+    if(isOn) parts += `<circle class="ring" cx="${p.x}" cy="${p.y}" r="9"/>`;
+    parts += `<circle class="lab${isOn?" on":""}${solved?" got":""}" cx="${p.lx}" cy="${p.ly}" r="14"/>`;
+    parts += `<text class="labtx" x="${p.lx}" y="${p.ly}" ${solved?'fill="#fff"':''}>${num}</text>`;
+    if(solved||(revealed&&isOn)){
+      const tx = p.side==="l" ? p.lx-19 : p.lx+19;
+      parts += `<text class="word" x="${tx}" y="${p.ly+5}" text-anchor="${p.side==="l"?"end":"start"}">${k}</text>`;
+    }
+  });
+  return `<div class="figwrap"><h4>${d.title}</h4>
+    <svg class="fig" viewBox="${d.vb}" xmlns="http://www.w3.org/2000/svg" role="img"
+      aria-label="Diagram of ${d.title.toLowerCase()} with numbered labels">
+      ${d.art}${parts}
+    </svg></div>`;
+}
+
+/* ---------------- Start ---------------- */
+function renderStart(){
+  el("app").innerHTML=`
+  <div class="start">
+    <p class="lede">Forty words from your <b>Health</b> wordlist, tested the way IELTS tests them.
+    Because this list is full of body parts, it includes a <b>diagram-labelling</b> section —
+    one of the question types that appears in both IELTS Listening and IELTS Reading.
+    Fifty questions in eight sections; you can stop and come back later.</p>
+    <div class="namefield">
+      <label for="who">Your name</label>
+      <input id="who" placeholder="Type your name" autocomplete="off" maxlength="40">
+    </div>
+    <div class="plan">
+      ${SECTIONS.map(s=>`
+      <div class="plan-row">
+        <span class="plan-tag" style="background:${s.hl}"></span>
+        <span class="plan-name">${s.name}</span>
+        <span class="plan-desc">${s.desc}</span>
+        <span class="plan-n">${secTotal(s.id)} Q</span>
+      </div>`).join("")}
+    </div>
+    <div class="btnrow">
+      <button class="btn" id="go">Start the quiz</button>
+      <button class="btn ghost sm" id="loadbtn">Load saved progress</button>
+    </div>
+    <p class="audionote" style="margin-top:18px;font-family:var(--mono);font-size:11px;color:var(--slate)">
+      Section 3 plays audio through your browser. Turn your sound on, or use headphones.</p>
+  </div>`;
+  el("go").onclick=()=>{S=newState(el("who").value.trim());render();};
+  el("loadbtn").onclick=()=>el("loadfile").click();
+}
+
+/* ---------------- Question rendering ---------------- */
+function render(){
+  if(S.finished) return renderResults();
+  const i=S.i,q=Q[i],sc=sec(q.s),done=S.res[i]!==undefined;
+  let body="";
+
+  if(q.s===8) body+=`<div class="passage"><h4>Notice — Al Wahda Health Centre</h4>${NOTICE}</div>`;
+  if(q.diagram) body+=figHTML(q.diagram,q.point,done);
+  if(q.listen){
+    body+=`<div class="audiobox">
+      <button class="playbtn" id="play"><span>▶</span> Play audio</button>
+      <button class="speedbtn${S.rate===1?" on":""}" data-rate="1">1.0×</button>
+      <button class="speedbtn${S.rate===0.75?" on":""}" data-rate="0.75">0.75×</button>
+      <span class="audionote">You may listen as many times as you need.</span>
+    </div>
+    <div class="notes"><h4>Patient notes</h4><p>${q.notes.replace("______",done?`<span class="hl" style="--swipe:${sc.hl}">${q.a}</span>`:"<b>______</b>")}</p></div>`;
+  }
+  if(q.sent) body+=`<p class="sentence" style="border-left-color:${sc.hl}">${mark(q.sent,sc.hl)}</p>`;
+
+  body+=`<p class="prompt">${q.prompt}</p>`;
+
+  if(q.tfng){
+    body+=`<div class="opts row">${TFNG_OPTS.map((o,k)=>optBtn(o,k,i,q,done)).join("")}</div>`;
+  } else if(q.opts){
+    body+=`<div class="opts">${q.opts.map((o,k)=>optBtn(o,k,i,q,done)).join("")}</div>`;
+  } else {
+    const g=S.given[i]||"";
+    body+=`<div class="gapwrap">
+      <input class="gap ${done?(S.res[i]?"right":"wrong"):""}" id="gapin" value="${esc(g)}"
+        placeholder="one word" autocomplete="off" autocapitalize="off" spellcheck="false" ${done?"disabled":""}>
+      ${done?"":'<button class="btn sm" id="check">Check answer</button>'}
+    </div>`;
+  }
+  if(done) body+=feedbackHTML(i,q);
+
+  el("app").innerHTML=`
+  <div class="layout">
+    <div>
+      <div class="card">
+        <div class="qhead">
+          <span class="qnum">Q${i+1} / 50</span>
+          <span class="sectag" style="background:${sc.hl}">${sc.name}</span>
+          <span class="spacer"></span>
+          <span class="instr">${sc.instr}</span>
+        </div>
+        ${body}
+      </div>
+      <div class="nav noprint">
+        <button class="btn ghost sm" id="prev" ${i===0?"disabled":""}>← Back</button>
+        <button class="btn sm" id="next">${i===49?"Finish and see results":"Next →"}</button>
+        <span class="spacer"></span>
+        <button class="btn ghost sm" id="save">Save progress</button>
+        <button class="btn ghost sm" id="quit">Finish now</button>
+      </div>
+    </div>
+    ${railHTML()}
+  </div>`;
+  wire(i,q,done);
+}
+
+function optBtn(text,k,i,q,done){
+  const keys="ABCD EFG".split("");
+  let cls="opt";
+  const chosen=S.given[i];
+  if(done){ if(k===q.a) cls+=" right"; else if(chosen===k) cls+=" wrong"; }
+  else if(chosen===k) cls+=" sel";
+  return `<button class="${cls}" data-k="${k}" ${done?"disabled":""}>
+    <span class="key">${keys[k]}</span><span>${text}</span></button>`;
+}
+
+function feedbackHTML(i,q){
+  const ok=S.res[i],w=W[q.w];
+  let right = q.tfng?TFNG_OPTS[q.a] : (q.opts?q.opts[q.a]:q.a);
+  return `<div class="fb ${ok?"":"no"}">
+    <div class="fb-top">
+      <span class="fb-verdict">${ok?"Correct.":"Not this time."}</span>
+      <span class="fb-pts">${ok?"+"+S.given["pts"+i]+" points":"Answer: "+right}</span>
+    </div>
+    <p>${q.why}</p>
+    ${q.listen?`<div class="transcript"><b>Transcript:</b> ${q.audio}</div>`:""}
+    <div class="wordcard">
+      <span class="w">${q.w}</span><span class="pos">${w.pos}</span>
+      <span class="ar">${w.ar}</span>
+      <p class="def">${w.def}</p>
+      <p class="ex">"${w.ex}"</p>
+    </div>
+  </div>`;
+}
+
+function railHTML(){
+  const pct=S.answered?Math.round(S.correct/S.answered*100):0;
+  return `<aside class="rail noprint">
+    <div class="rail-block">
+      <h3>Score</h3>
+      <div class="score-big">${S.correct}<span>/${S.answered||0} answered</span></div>
+      <div style="margin-top:10px">
+        <div class="stat"><span>Points</span><b>${S.points}</b></div>
+        <div class="stat"><span>Streak</span><b>${S.streak}${S.streak>=3?" 🔥":""}</b></div>
+        <div class="stat"><span>Accuracy</span><b>${pct}%</b></div>
+      </div>
+    </div>
+    <div class="rail-block gridblock">
+      <h3>Answer sheet</h3>
+      <div class="grid" id="grid">
+        ${Q.map((q,k)=>{
+          let c="cell";
+          if(k===S.i)c+=" now";
+          if(S.res[k]===true)c+=" ok"; else if(S.res[k]===false)c+=" no";
+          return `<button class="${c}" data-i="${k}" title="Question ${k+1}">${k+1}</button>`;
+        }).join("")}
+      </div>
+    </div>
+    <div class="rail-block">
+      <h3>Badges</h3>
+      ${S.badges.length?`<div class="badges">${S.badges.map(b=>
+        `<span class="badge">${BADGES.find(x=>x.id===b).label}</span>`).join("")}</div>`
+        :`<p class="rail-empty">None yet — answer some questions.</p>`}
+    </div>
+  </aside>`;
+}
+
+function wire(i,q,done){
+  document.querySelectorAll("#grid .cell").forEach(c=>c.onclick=()=>{S.i=+c.dataset.i;render();});
+  el("prev").onclick=()=>{if(S.i>0){S.i--;render();}};
+  el("next").onclick=()=>{if(S.i<49){S.i++;render();}else finish();};
+  el("save").onclick=saveJSON;
+  el("quit").onclick=()=>{if(confirm("Finish the quiz now and see your results?"))finish();};
+
+  if(!done){
+    document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>submit(i,q,+b.dataset.k));
+    const gi=el("gapin");
+    if(gi){
+      gi.focus();
+      gi.oninput=()=>{S.given[i]=gi.value;};
+      gi.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();submit(i,q,gi.value);}};
+      const cb=el("check"); if(cb) cb.onclick=()=>submit(i,q,gi.value);
+    }
+  }
+  if(q.listen){
+    el("play").onclick=()=>speak(q.audio,el("play"));
+    document.querySelectorAll(".speedbtn").forEach(b=>b.onclick=()=>{
+      S.rate=+b.dataset.rate;
+      document.querySelectorAll(".speedbtn").forEach(x=>x.classList.remove("on"));
+      b.classList.add("on");
+    });
+  }
+}
+
+function submit(i,q,val){
+  if(S.res[i]!==undefined) return;
+  let ok;
+  if(q.tfng||q.opts) ok=(val===q.a);
+  else{
+    if(norm(val)===""){toast("Type a word first.");return;}
+    ok=(q.accept||[q.a]).some(a=>norm(a)===norm(val));
+  }
+  S.given[i]=val; S.res[i]=ok; S.answered++;
+  if(ok){
+    S.correct++; S.streak++;
+    S.bestStreak=Math.max(S.bestStreak,S.streak);
+    const pts=2+(S.streak>=3?1:0)+(S.streak>=6?1:0);
+    S.given["pts"+i]=pts; S.points+=pts;
+  } else S.streak=0;
+
+  const before=[...S.badges];
+  BADGES.forEach(b=>{if(!S.badges.includes(b.id)&&b.test(S))S.badges.push(b.id);});
+  const gained=S.badges.filter(b=>!before.includes(b));
+  render();
+  if(gained.length) toast("Badge unlocked: "+BADGES.find(b=>b.id===gained[0]).label);
+  if(S.streak===5) burst(60);
+}
+
+/* ---------------- Speech ---------------- */
+function speak(text,btn){
+  if(!("speechSynthesis" in window)){toast("Your browser cannot play audio. Read the transcript in the feedback instead.");return;}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.rate=S.rate;u.lang="en-GB";
+  const vs=speechSynthesis.getVoices();
+  const v=vs.find(x=>/en-GB/i.test(x.lang))||vs.find(x=>/en/i.test(x.lang));
+  if(v)u.voice=v;
+  btn.classList.add("playing");btn.innerHTML="<span>■</span> Playing…";
+  u.onend=()=>{btn.classList.remove("playing");btn.innerHTML="<span>▶</span> Play again";};
+  u.onerror=()=>{btn.classList.remove("playing");btn.innerHTML="<span>▶</span> Play audio";
+    toast("Audio failed. Use the transcript after you answer.");};
+  speechSynthesis.speak(u);
+}
+if("speechSynthesis" in window){speechSynthesis.onvoiceschanged=()=>{};}
+
+/* ---------------- Results ---------------- */
+function readiness(p){
+  if(p>=92)return{v:"Band 6.5 – 7 range",c:"var(--hl-2)"};
+  if(p>=80)return{v:"Band 6 range",c:"var(--hl-1)"};
+  if(p>=66)return{v:"Band 5.5 range",c:"var(--hl-4)"};
+  if(p>=50)return{v:"Band 5 range",c:"var(--hl-3)"};
+  return{v:"Below Band 5 — revise the list",c:"var(--hl-3)"};
+}
+function finish(){S.finished=true;S.ended=Date.now();render();}
+
+function renderResults(){
+  const pct=Math.round(S.correct/50*100),r=readiness(pct);
+  const mins=Math.max(1,Math.round(((S.ended||Date.now())-S.started)/60000));
+  const wrong=Q.map((q,i)=>({q,i})).filter(x=>S.res[x.i]===false);
+  const unans=Q.map((q,i)=>i).filter(i=>S.res[i]===undefined);
+  const revise=[...new Set(wrong.map(x=>x.q.w))];
+
+  el("app").innerHTML=`
+  <div class="results">
+    <div class="bigscore">
+      <div class="n">${S.correct}<small>/50</small></div>
+      <div class="meta">${pct}% correct<br>${S.points} points · best streak ${S.bestStreak}<br>
+        ${mins} minute${mins>1?"s":""}${unans.length?` · ${unans.length} not answered`:""}</div>
+      <div class="readiness" style="background:${r.c}">
+        <div class="lab">Vocabulary readiness</div>
+        <div class="val">${r.v}</div>
+        <div class="cap">Guide only — based on this wordlist, not an official IELTS score.</div>
+      </div>
+    </div>
+    <h2 class="sec">by section</h2>
+    ${SECTIONS.map(s=>{
+      const c=secCorrect(S,s.id),t=secTotal(s.id),p=Math.round(c/t*100);
+      return `<div class="bar-row"><span class="bar-name">${s.name}</span>
+        <span class="bar-track"><span class="bar-fill" style="width:${p}%;background:${s.hl}"></span></span>
+        <span class="bar-num">${c}/${t}</span></div>`;
+    }).join("")}
+    <h2 class="sec">words to revise</h2>
+    ${revise.length?`<div class="revise">${revise.map(w=>
+      `<span class="rw">${w}<span class="ar">${W[w].ar}</span></span>`).join("")}</div>`
+      :`<p class="lede" style="font-size:17px">Nothing — you answered every question correctly. Excellent work.</p>`}
+    ${wrong.length?`<h2 class="sec">check your mistakes</h2>${wrong.map(x=>{
+      const right=x.q.tfng?TFNG_OPTS[x.q.a]:(x.q.opts?x.q.opts[x.q.a]:x.q.a);
+      const mine=x.q.tfng?TFNG_OPTS[S.given[x.i]]:(x.q.opts?x.q.opts[S.given[x.i]]:S.given[x.i]);
+      let stem;
+      if(x.q.sent) stem=mark(x.q.sent,"#E8DEE7");
+      else if(x.q.listen) stem=x.q.notes.replace("______","<b>______</b>")+
+        ` <span style="color:var(--slate)">— you heard: "${x.q.audio}"</span>`;
+      else if(x.q.diagram) stem=`Diagram: ${DIAGRAMS[x.q.diagram].title} — the marked part`;
+      else stem=x.q.prompt;
+      return `<div class="rev-item">
+        <p class="rev-q">Q${x.i+1} · ${sec(x.q.s).name}</p>
+        <p class="rev-p">${stem}</p>
+        <p class="rev-a">You wrote <s>${esc(mine||"—")}</s> · Correct: <b>${esc(right)}</b></p>
+      </div>`;}).join("")}`:""}
+    ${pct>=80?certHTML(pct):`<h2 class="sec">certificate</h2>
+      <p class="lede" style="font-size:17px">Reach <b>80%</b> (40 out of 50) to earn your certificate.
+      You are ${40-S.correct} question${40-S.correct===1?"":"s"} away. Revise the words above and try again.</p>`}
+    <div class="btnrow noprint" style="margin-top:34px">
+      <button class="btn" id="again">Try again</button>
+      <button class="btn ghost sm" id="save2">Save results (JSON)</button>
+      ${pct>=80?'<button class="btn ghost sm" id="print">Print certificate</button>':""}
+    </div>
+  </div>`;
+  el("again").onclick=()=>{S=newState(S.name);render();};
+  el("save2").onclick=saveJSON;
+  if(el("print"))el("print").onclick=()=>window.print();
+  if(pct>=80)burst(220);
+}
+function certHTML(pct){
+  const d=new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+  return `<h2 class="sec noprint">certificate</h2>
+  <div class="cert">
+    <div class="k">Certificate of Achievement</div>
+    <div class="who">${esc(S.name||"Student")}</div>
+    <div class="what">has successfully completed the B1+ Vocabulary List 2 (Fall) &ldquo;Health&rdquo;
+    quiz — 50 IELTS-style questions across reading, listening and diagram-labelling formats.</div>
+    <div class="sc">${S.correct}/50 &middot; ${pct}%</div>
+    <div class="k" style="margin-top:8px">${readiness(pct).v}</div>
+    <div class="sig">${d} &nbsp;·&nbsp; Higher Colleges of Technology &nbsp;·&nbsp; Designed by: Nazila Motahari</div>
+  </div>`;
+}
+
+/* ---------------- Save / load ---------------- */
+function saveJSON(){
+  const data={app:"B1+ Wordlist 2 Health Quiz",version:1,saved:new Date().toISOString(),state:S};
+  const b=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(b);
+  a.download=`wordlist2-${(S.name||"student").replace(/\s+/g,"-").toLowerCase()}.json`;
+  a.click();URL.revokeObjectURL(a.href);
+  toast("Progress saved to your downloads folder.");
+}
+el("loadfile").addEventListener("change",e=>{
+  const f=e.target.files[0];if(!f)return;
+  const rd=new FileReader();
+  rd.onload=()=>{
+    try{
+      const d=JSON.parse(rd.result);
+      if(!d.state||typeof d.state.i!=="number")throw 0;
+      S=d.state; shuffleQuestions(S.qorder||null); shuffleOptions(S.order||null); render();toast("Progress loaded. Continue where you stopped.");
+    }catch(err){toast("That file could not be read. Choose a saved quiz file.");}
+  };
+  rd.readAsText(f);e.target.value="";
+});
+
+/* ---------------- Confetti ---------------- */
+const cv=el("confetti"),cx=cv.getContext("2d");
+let parts=[],raf=null;
+function sizeC(){cv.width=innerWidth;cv.height=innerHeight;}
+addEventListener("resize",sizeC);sizeC();
+function burst(n){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  const cols=["#C9E04A","#8FE0C0","#F3A6CE","#F6C473","#C9A8E8","#8FC9EE","#2E1230"];
+  for(let i=0;i<n;i++)parts.push({x:innerWidth/2+(Math.random()-.5)*260,y:innerHeight*0.32,
+    vx:(Math.random()-.5)*11,vy:Math.random()*-13-4,w:5+Math.random()*7,h:8+Math.random()*10,
+    c:cols[i%cols.length],r:Math.random()*6,vr:(Math.random()-.5)*.35,life:150});
+  if(!raf)tick();
+}
+function tick(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  parts=parts.filter(p=>p.life>0&&p.y<cv.height+40);
+  parts.forEach(p=>{p.vy+=0.32;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life--;
+    cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);
+    cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore();});
+  raf=parts.length?requestAnimationFrame(tick):(cx.clearRect(0,0,cv.width,cv.height),null);
+}
+
+/* ---------------- Keyboard ---------------- */
+addEventListener("keydown",e=>{
+  if(!S||S.finished)return;
+  if(e.target.tagName==="INPUT")return;
+  if(e.key==="ArrowRight"&&S.i<49){S.i++;render();}
+  if(e.key==="ArrowLeft"&&S.i>0){S.i--;render();}
+  if(S.res[S.i]===undefined&&/^[1-4]$/.test(e.key)){
+    const b=document.querySelectorAll(".opt")[+e.key-1];if(b)b.click();
+  }
+});
+
+renderStart();
+
+</script>
+</body>
+</html>
